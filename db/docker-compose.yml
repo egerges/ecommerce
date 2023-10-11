@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mondodb:
+    image: 'mongo'
+    container_name: 'mongodb'
+    # environment:
+    #   - MONGO_INITDB_DATABASE=shoppers
+    #   - MONGO_INITDB_USERNAME=root
+    #   - MONGO_INITDB_PASSWORD=root
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
+      - ./data:/data/db
+    ports:
+      - '6565:27017'
