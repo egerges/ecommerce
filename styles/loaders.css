@@ -1,0 +1,23 @@
+/** Loader **/
+.loader {}
+
+.loader img {
+    width: 120px;
+    height: 120px;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    position:fixed;
+    animation: back-forth 1.5s linear infinite alternate;
+}
+
+@keyframes back-forth {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(50px);
+    }
+}
