@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppers' Back Office</title>
+
+    <!-- External styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Web Icon -->
+    <link rel="icon" href="./imgs/favicon.png">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="./styles/style_v1.css"/>
+    <link rel="stylesheet" href="./styles/login.css"/>
+    <link rel="stylesheet" href="./styles/cart-animation.css"/>
+    <link rel="stylesheet" href="./styles/inputs.css"/>
+    <link rel="stylesheet" href="./styles/modals.css"/>
+    <link rel="stylesheet" href="./styles/loaders.css"/>
+    <link rel="stylesheet" href="./styles/alerts.css"/>
+
+    <!-- Scripts -->
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/UIControls.js"></script>
+    <script src="./scripts/login.js"></script>
+
+</head>
+<body>
+    <div class="body">
+        <div class="container flx-col-center logoHolder width-50vw">
+            <svg id="cart" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="favicon 1">
+                <path id="left_tire" d="M174.667 380.772C165.47 380.772 156.48 383.499 148.833 388.609C141.186 393.718 135.226 400.98 131.707 409.477C128.187 417.974 127.266 427.324 129.06 436.344C130.855 445.364 135.283 453.649 141.787 460.152C148.29 466.656 156.575 471.084 165.595 472.879C174.615 474.673 183.965 473.752 192.462 470.232C200.959 466.713 208.221 460.753 213.33 453.106C218.44 445.459 221.167 436.469 221.167 427.272C221.154 414.943 216.251 403.123 207.533 394.406C198.816 385.688 186.996 380.785 174.667 380.772V380.772ZM174.667 453.764C169.426 453.764 164.302 452.21 159.944 449.298C155.586 446.386 152.19 442.247 150.184 437.405C148.178 432.563 147.654 427.235 148.676 422.094C149.699 416.954 152.223 412.232 155.929 408.526C159.635 404.82 164.357 402.296 169.497 401.273C174.638 400.251 179.966 400.775 184.808 402.781C189.65 404.787 193.789 408.183 196.701 412.541C199.613 416.899 201.167 422.023 201.167 427.264C201.16 434.29 198.366 441.026 193.398 445.995C188.429 450.963 181.693 453.757 174.667 453.764V453.764Z" fill="url(#paint0_linear)"/>
+                <path id="right_tire" d="M372.786 380.772C363.589 380.772 354.599 383.499 346.952 388.609C339.305 393.718 333.345 400.98 329.826 409.477C326.306 417.974 325.385 427.324 327.179 436.344C328.974 445.364 333.402 453.649 339.906 460.152C346.409 466.656 354.694 471.084 363.714 472.879C372.734 474.673 382.084 473.752 390.581 470.232C399.078 466.713 406.34 460.753 411.449 453.106C416.559 445.459 419.286 436.469 419.286 427.272C419.273 414.943 414.37 403.123 405.652 394.406C396.935 385.688 385.115 380.785 372.786 380.772V380.772ZM372.786 453.764C367.545 453.764 362.421 452.21 358.063 449.298C353.705 446.386 350.309 442.247 348.303 437.405C346.297 432.563 345.773 427.235 346.795 422.094C347.818 416.954 350.342 412.232 354.048 408.526C357.754 404.82 362.476 402.296 367.616 401.273C372.757 400.251 378.085 400.775 382.927 402.781C387.769 404.787 391.908 408.183 394.82 412.541C397.732 416.899 399.286 422.023 399.286 427.264C399.279 434.29 396.485 441.026 391.517 445.995C386.549 450.963 379.812 453.757 372.786 453.764V453.764Z" fill="url(#paint1_linear)"/>
+                <path id="main_cart" d="M470.433 103.407L130.352 98.271L121.023 70C117.964 60.6984 112.048 52.5987 104.119 46.8534C96.19 41.1082 86.6508 38.0101 76.859 38H41.719C39.0668 38 36.5233 39.0536 34.6479 40.9289C32.7726 42.8043 31.719 45.3478 31.719 48C31.719 50.6522 32.7726 53.1957 34.6479 55.0711C36.5233 56.9464 39.0668 58 41.719 58H76.859C82.4455 58.0154 87.8851 59.7908 92.4052 63.074C96.9252 66.3571 100.296 70.9811 102.038 76.289L113.819 111.9L168.178 276.18L163.278 288.045C160.369 295.093 159.246 302.75 160.008 310.336C160.77 317.922 163.395 325.202 167.648 331.53C171.901 337.858 177.651 343.038 184.387 346.609C191.124 350.18 198.638 352.032 206.262 352H409.281C411.933 352 414.477 350.946 416.352 349.071C418.227 347.196 419.281 344.652 419.281 342C419.281 339.348 418.227 336.804 416.352 334.929C414.477 333.054 411.933 332 409.281 332H206.262C201.919 332.03 197.637 330.985 193.796 328.957C189.956 326.93 186.677 323.984 184.252 320.381C181.827 316.778 180.331 312.631 179.899 308.31C179.466 303.989 180.11 299.628 181.772 295.616L185.616 286.344L405.349 263.844C417.086 262.635 428.159 257.813 437.04 250.044C445.92 242.274 452.171 231.941 454.929 220.468L480.007 115.73C480.355 114.273 480.372 112.756 480.055 111.292C479.738 109.828 479.097 108.454 478.178 107.271C477.259 106.088 476.085 105.126 474.745 104.458C473.404 103.789 471.931 103.43 470.433 103.407ZM435.478 215.822C433.688 223.265 429.632 229.97 423.87 235.011C418.108 240.052 410.924 243.181 403.309 243.966L185.944 266.24L137.008 118.374L457.649 123.217L435.478 215.822Z" fill="url(#paint2_linear)"/>
+                </g>
+                <defs>
+                <linearGradient id="paint0_linear" x1="212" y1="381" x2="168" y2="427" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00EFD1"/>
+                <stop offset="1" stop-color="#00ACEA"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="400.5" y1="390.5" x2="346" y2="453.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00ACEA"/>
+                <stop offset="1" stop-color="#00EFD1"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="32" y1="43" x2="418.5" y2="346" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00EFD1"/>
+                <stop offset="1" stop-color="#00ACEA"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="container flx-col-center width-50vw login">
+            <h1>Shoppers'</h1>
+            <form id="login" class="flx-col-center">
+                <div class="col-25 field">
+                    <input type="text" name="username" id="username" autocomplete="off" required/>
+                    <label for="username" title="Username" data-title="Username"></label>
+                </div>
+                <div class="col-25 field">
+                    <input type="password" name="password" id="password" autocomplete="off" required/>
+                    <label for="password" title="Password" data-title="Password"></label>
+                </div>
+                <input type="submit" name="btnLogin" id="btnLogin" value="Login"/>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <img src="./imgs/favicon.png"/>
+        <p>Shoppers' Back Office</p>
+    </footer>
+
+    <!-- Loader -->
+    <div id="loader-modal" class="modal">
+        <div class="loader">
+            <img src="./imgs/favicon.png"/>
+        </div>
+    </div>
+
+    <!-- alert success popup start -->
+    <div id="success-alert" class="alert-box-wrap alert-success-popup">
+        <div class="alert-content">
+            <div class="icon">
+                <img src="./imgs/success-icon.svg" alt="alert-icon">
+            </div>
+            <div class="body">
+                <h3 id="success-title"></h3>
+                <p id="success-message"></p>
+            </div>
+            <div id="success-close-btn" class="close-alert">
+                <label for="alert-success-popup">&times;</label>
+            </div>
+        </div>
+    </div>
+    <!-- alert success popup end -->
+ 
+    <!-- alert error popup start -->
+    <div  id="error-alert"  class="alert-box-wrap alert-error-popup">
+        <div class="alert-content">
+            <div class="icon">
+                <img src="./imgs/error-icon.svg" alt="alert-icon">
+            </div>
+            <div class="body">
+                <h3  id="error-title"></h3>
+                <p id="error-message"></p>
+            </div>
+            <div id="error-close-btn" class="close-alert">
+                <label for="alert-error-popup">&times;</label>
+            </div>
+        </div>
+    </div>
+    <!-- alert error popup end -->
+</body>
+</html>

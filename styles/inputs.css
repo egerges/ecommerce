@@ -1,0 +1,109 @@
+.field {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.field label::before {
+	content: attr(title);
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #777;
+	transition: 300ms all;
+}
+
+.field input, textarea {
+	width: 100%;
+	line-height: 40px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #222;
+}
+
+.field input:focus, textarea:focus {
+	outline: 0;
+	border-color: var(--main-color);
+}
+
+.field input:valid + label::before, textarea:valid + label::before{
+	line-height: 20px;
+	font-size: 12px;
+    top: 0px;
+	background: #fff;
+	padding: 0 6px;
+	left: 15px;
+	content: attr(data-title);
+}
+
+.field input:focus + label::before, textarea:focus + label::before {
+	line-height: 20px;
+	font-size: 12px;
+	top: 0px;
+	background: #fff;
+	padding: 0 6px;
+	left: 15px;
+	color: var(--main-color);
+}
+
+input {
+    outline: none;
+}
+
+input[type=text], 
+input[type=password], 
+input[type=date], 
+input[type=number],
+input[type=tel],
+select,
+textarea {
+    width: 100%;
+    margin: 8px 0;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+}
+
+select,
+input[type=date] {
+    cursor: pointer;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid transparent;
+    border: 2px solid var(--main-color);
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input, textarea, select {
+    outline: none;
+}
+
+input[type=reset] {
+    border: 1px solid var(--main-color);
+    background-color: white;
+    color: var(--main-color);
+}
+
+input[type=reset]:hover {
+    border: 1px solid white;
+    background-color: var(--main-color);
+    color: white;
+}

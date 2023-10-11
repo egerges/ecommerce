@@ -1,0 +1,41 @@
+* {
+    overflow: hidden;
+}
+
+#login {
+    margin: 30px;
+}
+
+.body {
+    display: flex;
+}
+
+.width-50vw {
+    width: 50vw;
+}
+
+.container {
+    background-color: #FFF;
+    height: 90vh;
+}
+
+.flx-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .body {
+        flex-direction: column;
+    }
+    .container {
+        width: 100vw;
+        height: unset;
+    }
+    .logoHolder {
+        height: 10vh;
+    }
+}

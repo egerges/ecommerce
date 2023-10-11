@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --main-color: #00acea;
+    --secondary-color: #00efd1;
+
+    font-family: pt-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    color: var(--main-color);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.active {
+    background-color: white;
+    color: var(--main-color);
+}
+
+.btn-holder {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-items: center;
+}
+
+.w3-button:hover {
+    color: #FFF!important;
+    background-color: var(--main-color)!important;
+}
+
+#mySidebar {
+    transition: opacity .5s, visibility .5s, transform .5s;
+}
+
+.animate-sidebar-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+}
+
+.animate-sidebar-hide {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+}
+
+.remove-a-decoration{
+    text-decoration: none;
+}
+
+.main-logo {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .animate-sidebar-hide {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-200px);
+    }
+}

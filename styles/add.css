@@ -1,0 +1,66 @@
+#addInfectedPerson {
+    width: 90%;
+    margin: auto;
+    border: solid 1px var(--main-color);
+    border-radius: 3px;
+    padding: 5%;
+    outline: none;
+}
+
+#addInfectedPerson input[type=date] {
+    width: 65%;
+}
+
+#addInfectedPerson input {
+    outline: none;
+}
+
+.field {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.field label::before {
+	content: attr(title);
+	position: absolute;
+	top: 0;
+	left: 15px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #777;
+	transition: 300ms all;
+}
+
+.field input, textarea {
+	width: 100%;
+	line-height: 40px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #222;
+}
+
+.field input:focus, textarea:focus {
+	outline: 0;
+	border-color: var(--main-color);
+}
+
+.field input:valid + label::before, textarea:valid + label::before{
+	line-height: 20px;
+	font-size: 12px;
+	top: -10px;
+	background: #fff;
+	padding: 0 6px;
+	left: 9px;
+	content: attr(data-title);
+}
+
+.field input:focus + label::before, textarea:focus + label::before {
+	line-height: 20px;
+	font-size: 12px;
+	top: -10px;
+	background: #fff;
+	padding: 0 6px;
+	left: 9px;
+	color: var(--main-color);
+}

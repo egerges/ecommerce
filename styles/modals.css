@@ -1,0 +1,189 @@
+/** Modal **/ 
+.modal {
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-style: solid;
+    border-width: 1.7px;
+    border-color: var(--principal-blue);
+    padding: 1rem 1.5rem;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 0.2rem;
+}
+ 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+ 
+.modal-body{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+ 
+.close-button {
+  font-size: 40px;
+  padding: 0;
+  margin-top: -20px;
+  cursor: pointer;
+}
+ 
+/* .share-box/*:checked::before* {
+  /*background-color: var(--main-c-1);
+  color: var(--main-c-1);*
+  width: 15px;
+  height: 15px;
+} */
+ 
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+ 
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+ 
+/* .modal-body .email-wrapper {
+    padding: 5px;
+    text-align: center;
+}
+ 
+.modal-body .email-wrapper input {
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    padding: 2px;
+    height: 40px;
+} */
+
+.product-details-card-modal {
+  z-index: 120;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear .25s, opacity .25s 0s, transform .25s;
+}
+
+.product-details-card-wrapper {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: calc(65vh + 30px);
+  border-style: solid;
+  border-width: thin;
+  border-color: grey;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+
+.table-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+
+.table-flex div {
+  width: 100%;
+  padding-right: 20px;
+}
+
+.left-right {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.to-right {
+  display: flex;
+  justify-content: right;
+  justify-items: center;
+  align-items: center;
+}
+
+.card-header {
+  width: 100%;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.btnClose {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#product-details-txtHeader {
+  padding: 10px;
+  color: white;
+}
+
+.product-card-details {
+  font-size: 12px;
+}
+
+.product-card-details th {
+  width: 15%;
+}
+
+.product-card-details th, .product-card-details td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modalHeadings {
+  color: var(--main-color);
+  text-align: center;
+  vertical-align: center;
+}
+
+.mainColor {
+  color: var(--main-color);
+}
+
+@media only screen and (max-height: 700px) {
+  .table-flex {
+    display: block;
+  }
+
+  .table-flex div {
+    padding: 0;
+  }
+}

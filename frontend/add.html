@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alman COVID committee</title>
+
+    <!-- External styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Web Icon -->
+    <link rel="icon" href="./imgs/favicon.png">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <link rel="stylesheet" href="./styles/inputs.css"/>
+    <link rel="stylesheet" href="./styles/add.css"/>
+    <link rel="stylesheet" href="./styles/modals.css"/>
+    <link rel="stylesheet" href="./styles/loaders.css"/>
+    <link rel="stylesheet" href="./styles/alerts.css"/>
+
+    <!-- Scripts -->
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/UIControls.js"></script>
+    <script src="./scripts/add.js"></script>
+
+</head>
+<body>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:10%;font-size:22px">&#10005;</a>
+        <div class="w3-container">
+            <h3><b>Alman COVID<br>committee</b></h3>
+        </div>
+        <div class="w3-bar-block">
+        <a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Add Person</a> 
+        <a id="btnLogout" class="w3-bar-item w3-button w3-hover-white">Logout</a>
+        </div>
+    </nav>
+    
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Shoppers'</span>
+    </header>
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:60px" id="showcase">
+            <h3><b>Shoppers'</b></h3>
+            <h6 style="color: var(--main-color);"><b>Add new Product.</b></h6>
+            <hr style="width:50px;border:1px solid var(--main-color)" class="w3-round">
+        </div>
+            <form id="addInfectedPerson">
+                <div>
+                    <div class="col-25 field">
+                        <input type="text" id="fname" name="firstname" required autocomplete="off">
+                        <label for="fname" title="First name" data-title="First name"></label>
+                    </div>
+                    <div class="col-25 field">
+                        <input type="text" id="lname" name="lastname" required autocomplete="off">
+                        <label for="lname" title="Last name" data-title="Last name"></label>
+                    </div>
+                    <div class="col-25 left-right">
+                        Date of Birth: <input type="date" id="dob" name="dob" title="Date of Birth..." required>
+                    </div>
+                    <div class="col-25 field">
+                        <input type="text" id="residency" name="residency" required autocomplete="off">
+                        <label for="residency" title="Residence" data-title="Residence"></label>
+                    </div>
+                    <div class="col-25 left-right">
+                        Date infected: <input type="date" id="dateinfected" name="dateinfected" title="Date Infected..." required>
+                    </div>
+                    <div class="col-25 field">
+                        <input type="number" id="cq" name="cq" required autocomplete="off">
+                        <label for="cq" title="CQ" data-title="CQ"></label>
+                    </div>
+                    <div class="col-25 left-right">
+                        Last PCR: <input type="date" id="lastpcr" name="lastpcr" title="Last PCR..." required>
+                    </div>
+                    <div class="col-25 field">
+                        <input type="tel" id="mobile" name="mobile" required autocomplete="off">
+                        <label for="mobile" title="Mobile" data-title="Mobile"></label>
+                    </div>
+                    <div class="col-25 field">
+                        <input type="tel" id="emergencycontact" name="emergencycontact" required autocomplete="off">
+                        <label for="emergencycontact" title="Emergency Contact" data-title="Emergency Contact"></label>
+                    </div>
+                    <div class="col-25 field">
+                        <textarea id="address" name="address" required autocomplete="off"></textarea>
+                        <label for="address" title="Address" data-title="Address"></label>
+                    </div>
+                    <div class="col-25">
+                        <select name="nurse" id="nurse">
+                            <option value="none" selected disabled>Select Nurse</option>
+                        </select>
+                    </div>
+                    <div class="col-25">
+                        <select name="status" id="status">
+                            <option value="none" selected disabled>Select Status</option>
+                            <option value="positive">Positive</option>
+                            <option value="negative">Negative</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row btn-holder">
+                    <input type="reset" value="Reset" class="to-right">
+                    <input id="btnAdd" type="submit" value="Add" class="to-right">
+                </div>
+            </form>
+    </div>
+  
+  <!-- End page content -->
+    <footer>
+        <img src="./imgs/favicon.png"/>
+        <p>Shoppers' Back Office</p>
+    </footer>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+    <!-- Loader -->
+    <div id="loader-modal" class="modal">
+        <div class="loader">
+            <img src="./imgs/favicon.png"/>
+        </div>
+    </div>
+
+    <!-- alert success popup start -->
+    <div id="success-alert" class="alert-box-wrap alert-success-popup">
+        <div class="alert-content">
+            <div class="icon">
+                <img src="./imgs/success-icon.svg" alt="alert-icon">
+            </div>
+            <div class="body">
+                <h3 id="success-title"></h3>
+                <p id="success-message"></p>
+            </div>
+            <div id="success-close-btn" class="close-alert">
+                <label for="alert-success-popup">&times;</label>
+            </div>
+        </div>
+    </div>
+    <!-- alert success popup end -->
+ 
+    <!-- alert error popup start -->
+    <div  id="error-alert"  class="alert-box-wrap alert-error-popup">
+        <div class="alert-content">
+            <div class="icon">
+                <img src="./imgs/error-icon.svg" alt="alert-icon">
+            </div>
+            <div class="body">
+                <h3  id="error-title"></h3>
+                <p id="error-message"></p>
+            </div>
+            <div id="error-close-btn" class="close-alert">
+                <label for="alert-error-popup">&times;</label>
+            </div>
+        </div>
+    </div>
+    <!-- alert error popup end -->
+</body>
+</html>

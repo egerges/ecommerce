@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppers' Back Office</title>
+
+    <!-- External styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/cqa6vvc.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- Webix CDN -->
+    <link rel="stylesheet" href="./scripts/webix/codebase/webix.css" type="text/css" charset="UTF-8">
+    <script src="./scripts/webix/codebase/webix.js" type="text/javascript" charset="UTF-8"></script>
+
+    <!-- Web Icon -->
+    <link rel="icon" href="./imgs/favicon.png">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/employees.css"/>
+    <link rel="stylesheet" href="./styles/modals.css"/>
+    <link rel="stylesheet" href="./styles/loaders.css"/>
+    <link rel="stylesheet" href="./styles/alerts.css"/>
+
+    <!-- Data Table Script and Styling -->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables-classic@latest/dist/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables-classic@latest" type="text/javascript"></script>
+
+    <!-- Scripts -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/UIControls.js"></script>
+    <script src="./scripts/general.js"></script>
+    <script src="./scripts/employees.js"></script>
+
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="styles/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+        ============================================ -->
+    <link rel="stylesheet" href="styles/css/owl.carousel.css">
+    <link rel="stylesheet" href="styles/css/owl.theme.css">
+    <link rel="stylesheet" href="styles/css/owl.transitions.css">
+    <!-- animate CSS
+        ============================================ -->
+    <link rel="stylesheet" href="styles/css/animate.css">
+    <!-- normalize CSS
+        ============================================ -->
+    <link rel="stylesheet" href="styles/css/normalize.css">
+    <!-- meanmenu icon CSS
+        ============================================ -->
+    <link rel="stylesheet" href="styles/css/meanmenu.min.css">
+    <!-- main CSS
+        ============================================ -->
+    <link rel="stylesheet" href="styles/css/main.css">
+
+    <!-- morrisjs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="styles/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="styles/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="styles/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="styles/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="styles/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="styles/css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="styles/style_support.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="styles/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="scripts/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="./styles/JStyling/Colorize.js"></script>
+
+
+</head>
+<body>
+
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <a href="main.html"><img class="main-logo large-logo" src="imgs/logo/logo.png" alt="" /></a>
+                <strong><a href="main.html"><img src="imgs/logo/logosn.png" alt="" /></a></strong>
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a href="main.html" aria-expanded="false">
+                                <span class="glyphicon glyphicon-dashboard"></span>
+                                <span class="mini-click-non">Dashboard</span>
+							</a>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">
+								   <span class="glyphicon glyphicon-th-large"></span>
+								   <span class="mini-click-non">Products</span>
+								</a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Products List" href="./products.html"><span class="mini-sub-pro">Products List</span></a></li>
+                                <li><a title="Product" href="./product.html"><span class="mini-sub-pro">Product</span></a></li>
+                                <li><a title="Categories" href="#"><span class="mini-sub-pro">Categories</span></a></li>
+                                <li><a title="Catalogs" href="#"><span class="mini-sub-pro">Catalogs</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">
+								   <span class="glyphicon glyphicon-user"></span>
+								   <span class="mini-click-non">Employees</span>
+								</a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Products List" href="./employees.html"><span class="mini-sub-pro">Employees List</span></a></li>
+                                <li><a title="Product" href="./employee.html"><span class="mini-sub-pro">Employee</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="imgs/logo/logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+												<i class="glyphicon glyphicon-menu-hamburger"></i>
+											</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav navbar-nav mai-top-nav">
+                                                <li class="nav-item"><a href="#" class="nav-link">Home</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">About</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Services</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Support</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+															<img src="imgs/profiles/avatar.svg" alt="" />
+															<span class="admin-name" id="admin-name"></span>
+															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+														</a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                        </li>
+                                                        <li><a id="btnLogout"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul class="mobile-menu-nav">
+                                        <li><a href="main.html">Dashboard</a></li>
+                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Products<span class="admin-project-icon"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a title="Products List" href="./products.html">Products List</a></li>
+                                                <li><a title="Product" href="./product.html"><span class="mini-sub-pro">Product</span></a></li>
+                                                <li><a title="Categories" href="#"><span class="mini-sub-pro">Categories</span></a></li>
+                                                <li><a title="Catalogs" href="#"><span class="mini-sub-pro">Catalogs</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="has-arrow" href="#">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                                <span class="mini-click-non">Employees</span>
+                                                </a>
+                                            <ul class="submenu-angle" aria-expanded="false">
+                                                <li><a title="Products List" href="./employees.html"><span class="mini-sub-pro">Employees List</span></a></li>
+                                                <li><a title="Product" href="./employee.html"><span class="mini-sub-pro">Employee</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <form role="search" class="sr-input-func">
+                                                <input type="text" placeholder="Search..." class="search-int form-control">
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="main.html">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">Employees / Employees List</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tblemployees" style="margin: 15px;"></div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2021. All rights reserved. Property of Shoppers'</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="scripts/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="scripts/js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="scripts/js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="scripts/js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="scripts/js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="scripts/js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="scripts/js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="scripts/js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+		============================================ -->
+    <script src="scripts/js/counterup/jquery.counterup.min.js"></script>
+    <script src="scripts/js/counterup/waypoints.min.js"></script>
+    <script src="scripts/js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="scripts/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="scripts/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="scripts/js/metisMenu/metisMenu.min.js"></script>
+    <script src="scripts/js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <!-- <script src="scripts/js/morrisjs/raphael-min.js"></script>
+    <script src="scripts/js/morrisjs/morris.js"></script>
+    <script src="scripts/js/morrisjs/morris-active.js"></script> -->
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="scripts/js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="scripts/js/sparkline/jquery.charts-sparkline.js"></script>
+    <script src="scripts/js/sparkline/sparkline-active.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="scripts/js/calendar/moment.min.js"></script>
+    <script src="scripts/js/calendar/fullcalendar.min.js"></script>
+    <script src="scripts/js/calendar/fullcalendar-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="scripts/js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="scripts/js/main.js"></script>
+
+    <!-- Loader -->
+    <div id="loader-modal" class="modal">
+        <div class="loader">
+            <img src="./imgs/favicon.png"/>
+        </div>
+    </div>
+
+    <!-- alert success popup start -->
+    <div id="success-alert" class="alert-box-wrap alert-success-popup">
+        <div class="alert-content">
+            <div class="icon">
+                <img src="./imgs/success-icon.svg" alt="alert-icon">
+            </div>
+            <div class="body">
+                <h3 id="success-title"></h3>
+                <p id="success-message"></p>
+            </div>
+            <div id="success-close-btn" class="close-alert">
+                <label for="alert-success-popup">&times;</label>
+            </div>
+        </div>
+    </div>
+    <!-- alert success popup end -->
+ 
+    <!-- alert error popup start -->
+    <div  id="error-alert"  class="alert-box-wrap alert-error-popup">
+        <div class="alert-content">
+            <div class="icon">
+                <img src="./imgs/error-icon.svg" alt="alert-icon">
+            </div>
+            <div class="body">
+                <h3  id="error-title"></h3>
+                <p id="error-message"></p>
+            </div>
+            <div id="error-close-btn" class="close-alert">
+                <label for="alert-error-popup">&times;</label>
+            </div>
+        </div>
+    </div>
+    <!-- alert error popup end -->
+</body>
+</html>

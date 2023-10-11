@@ -1,0 +1,12 @@
+.product_popUp {
+    position: relative;
+    min-width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.product_sheet {
+    position: relative;
+    left: 100%;
+    top: 100%;
+}

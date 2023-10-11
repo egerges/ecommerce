@@ -1,0 +1,41 @@
+#left_tire, #right_tire {
+    animation: wheel 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#main_cart {
+    animation: cart 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+#cart {
+    animation: back-forth 1s linear infinite alternate;
+}
+
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes cart {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(20deg);
+    }
+}
+
+@keyframes back-forth {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(50px);
+    }
+}
